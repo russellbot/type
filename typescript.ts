@@ -44,23 +44,36 @@ let error = (): never => {
 }
 
 // interface - create a new name that is used everywhere
+// the ? after magic makes it an optional property of the object
 interface RobotArmy {
     count: number,
     type: string,
-    magic: string
+    magic?: string
 }
 
 let fightRobotArmy = (robots: RobotArmy) => {
     console.log('FIGHT!')
 }
 
+fightRobotArmy({count: 1, type:'dragon'})
+
 let fightRobotArmy2 = (robots: {count: number, type: string, magic: string}) => {
     console.log('FIGHT!')
 }
 
-// type - similar to interface but doesn't work with all declarations
+// type - similar to interface but doesn't work with all declarations - tl;dr Prefer interface types over type aliases.
 type RobotArmy2 = {
     count: number,
     type: string,
     magic: string
 }
+
+// Type Assertion
+interface CatArmy {
+    count: number,
+    type: string,
+    magic: string
+}
+
+let dog = {} as CatArmy
+dog.count
