@@ -26,3 +26,20 @@ var Size;
     Size[Size["Large"] = 3] = "Large";
 })(Size || (Size = {}));
 var sizeName = Size.Small;
+// Any - !!!!!!!! BE CAREFUL
+var whatever = 'agghhhh noooo!';
+whatever = basket;
+// void
+var sing = function () {
+    console.log('lalala');
+};
+// never
+var error = function () {
+    throw Error('ooops');
+};
+var fightRobotArmy = function (robots) {
+    console.log('FIGHT!');
+};
+var fightRobotArmy2 = function (robots) {
+    console.log('FIGHT!');
+};
