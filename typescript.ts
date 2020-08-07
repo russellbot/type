@@ -20,3 +20,11 @@ let wizard: object = {
 // null and undefined
 let meh: undefined = undefined
 let noo: null = null
+
+// Tuple
+let basket: [string, number];
+basket = ['basketball', 5]
+
+// Enum
+enum Size { Small = 1, Medium = 2, Large = 3 }
+let sizeName: number = Size.Small;
