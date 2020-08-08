@@ -77,3 +77,39 @@ interface CatArmy {
 
 let dog = {} as CatArmy
 dog.count
+
+// Function
+let fightRobotArmy3 = (robots: RobotArmy): void => {
+    console.log('FIGHT!')
+}
+
+let fightRobotArmy4 = (robots: {count: number, type: string, magic: string}): number => {
+    console.log('FIGHT!')
+    return 5
+}
+
+// Class
+// can make variable inside a class "private" so they cannot be used outside
+// variable are public by default
+class Animal {
+    private sing: string = 'lalalalala'
+    constructor(sound: string) {
+        this.sing = sound;
+    }
+
+    greet(): string {
+        return `Hello ${this.sing}`
+    }
+}
+
+let lion = new Animal('RAAAAWR')
+lion.greet()
+
+// Union
+// type can be either string OR number
+let confused: string | number = 5
+
+// Typescript auto assigns types when not specified
+// the following will throw an error because x is automatically assigned a type of 'number'
+let x = 4
+x = 'hello'
